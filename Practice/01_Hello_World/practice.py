@@ -1,0 +1,21 @@
+# ===================================
+# PRACTICE: Hello World & Print
+# ===================================
+
+# Practice 1: Print your name
+print("Connor O'Malley")
+
+# Practice 2: Print your age
+print(35)
+
+# Practice 3: Print your favorite color
+print("Purple")
+
+# Practice 4: Print a sentence about yourself
+print("I am trying to learn Python with Claudes help.")
+
+# Practice 5: Print 3 different numbers
+print("1, 2, 3")
+
+# Challenge: Print your name, age, and favorite color all in one print statement
+print("Connor 35 Purple")
