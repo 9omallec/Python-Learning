@@ -10,8 +10,8 @@ print(area * radius * radius)
 
 # Exercise 2: Convert 100 degrees Fahrenheit to Celsius
 # Formula: C = (F - 32) * 5/9
-fahr = 100
-celsius = ((fahr - 32) * 5/9)
+fahrenheit = 100
+celsius = (fahrenheit - 32) * 5 / 9
 print(celsius)
 
 # Exercise 3: You have $100. You buy 3 items at $12.50 each
@@ -53,7 +53,7 @@ day_in_year = 365
 print(age * day_in_year)
 
 # Exercise 8: Calculate the average of five numbers: 78, 92, 85, 88, 95
-print((78 + 92 +85 + 88 + 92) / 5)
+print((78 + 92 + 85 + 88 + 95) / 5)
 
 # Exercise 9: You're saving money. You have $50 and save $20 per week
 # How much will you have after 10 weeks?
@@ -79,9 +79,9 @@ print(3 * 365)
 # Item costs $49.99, tax rate is 8% (0.08)
 # What's the total price with tax?
 cost = 49.99
-tax = .08
-tax_calc = (cost * tax)
-total_cost = (cost + tax_calc)
+tax = 0.08
+tax_amount = cost * tax
+total_cost = cost + tax_amount
 print(total_cost)
 
 # Challenge: Calculate BMI (Body Mass Index)

@@ -35,11 +35,11 @@ print(name[0])
 print(name[-1])
 
 # Practice 9: Ask user for their full name, print just the first 3 letters
-full_name = input("What is your full name?")
+full_name = input("What is your full name? ")
 print(full_name[0:3])
 
 # Challenge: Ask for first and last name separately
 # Print them as: "Last, First" (like O'Malley, Connor)
-first = input("What is your first name?")
-last = input("What is your last name?")
+first = input("What is your first name? ")
+last = input("What is your last name? ")
 print(f"{last}, {first}")

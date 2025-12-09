@@ -42,7 +42,7 @@ else:
 temp = int(input("What is the temperature? "))
 if temp > 80:
     print("Hot")
-elif temp >= 60 and temp <= 80:
+elif 60 <= temp <= 80:  # Pythonic chained comparison
     print("Nice")
 else:
     print("Cold")
@@ -68,7 +68,7 @@ else:
 # If 18+: print "{name}, you can vote!"
 # If under 18: print "{name}, you can vote in {X} years"
 name = input("What is your name? ")
-age = int(input("What is your age?" ))
+age = int(input("What is your age? "))
 almost = 18 - age
 if age >= 18:
     print(f"{name}, You can vote! ")

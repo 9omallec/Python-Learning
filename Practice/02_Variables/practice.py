@@ -34,3 +34,4 @@ pants = "Blue"
 hat = "Black"
 
 print(hair, height, shirt, pants, hat)
+

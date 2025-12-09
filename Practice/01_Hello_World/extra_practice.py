@@ -21,7 +21,7 @@ print("(o o)")
 print("\_/")
 
 # Exercise 3: Print the result of 5 + 3 without using variables
-print(" 5 + 3 = 6")
+print(5 + 3)
 
 # Exercise 4: Print multiple things in one print statement
 # Your name, your age, and your favorite food (all in one line)
