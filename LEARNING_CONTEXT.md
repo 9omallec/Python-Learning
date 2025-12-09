@@ -2,39 +2,61 @@
 
 **Student:** Connor (GitHub: 9omallec)
 **Started:** November 18, 2025
-**Current Status:** Lesson 7B (While Loops)
-**Last Updated:** November 30, 2025
+**Current Status:** RESTARTING from Lesson 1 with Build-First Method
+**Last Updated:** December 8, 2025
+**Major Update:** Complete system restructure based on 2025 research
 
 ---
 
 ## Overview
 
-Connor is learning Python from scratch with the goal of becoming job-ready in 6-12 months. This is a structured, project-based learning approach with emphasis on building real skills through practice.
+Connor is learning Python with goal of becoming job-ready. On December 8, 2025, the entire learning system was restructured based on 2025 cognitive science research and the "build-first" methodology. Connor decided to RESTART from Lesson 1 using this new, research-backed approach.
 
 ---
 
-## Learning Approach & Principles
+## 🚨 MAJOR UPDATE (Dec 8, 2025)
 
-### Teaching Style
-- **Interactive & hands-on:** Focus on doing, not just reading
-- **Incremental difficulty:** Start simple, build complexity gradually
-- **Immediate practice:** Every concept gets exercises
-- **Project-based:** Apply skills to real projects after Lesson 6
-- **Error-friendly:** Mistakes are learning opportunities
+### What Changed:
+Complete system restructure based on 2025 research showing:
+- **84% of successful students** learn through building projects, NOT memorizing syntax
+- **30-50% better retention** with spaced repetition (Days 1, 7, 16, 35)
+- **25-40% improvement** with active recall testing
+- **Build-first beats read-first** for programming education
 
-### Key Principles
-1. **Understanding over speed** - Take time to grasp concepts
-2. **Type, don't copy** - Build muscle memory
-3. **Daily practice** - Consistency matters more than duration
-4. **Review often** - Revisit old lessons regularly
-5. **Build projects** - Real learning happens in application
-6. **Read error messages** - They're teaching tools
+### New System Files Created (65+ files):
+1. **Master Resources:** LEARNING_OPTIMIZATION.md, BUILD_FIRST_METHOD.md, REVIEW_SCHEDULE.md, DELIBERATE_PRACTICE.md, SYNTAX_REFERENCE.md, PROJECT_CHALLENGES.md
+2. **Per Lesson (Lessons 1-7B):** ACTIVE_RECALL.md, BUILD_PROJECTS.md, LESSON_GUIDE.md
+3. **Tracking:** MY_BUILDS_TRACKER.md
+4. **Guides:** START_HERE_NEW.md, WHATS_NEW_2025.md, RESTRUCTURE_COMPLETE.md
 
-### Exercise Structure
-Each lesson has three files:
-- `lesson.py` - Explanations and examples
-- `practice.py` - Basic exercises to reinforce concepts
-- `extra_practice.py` - Harder challenges for deeper understanding
+### New Learning Approach (Build-First Method):
+
+**OLD (What we did before):**
+```
+Read lesson → Do exercises → Hope it sticks
+```
+
+**NEW (Research-backed):**
+```
+Micro-lesson (5 min) → Build project (20 min) → Build more (60 min) → Active recall test (10 min) → Review strategically (Days 1, 7, 16, 35)
+```
+
+### Key Principles (Updated):
+1. **Build First, Always** - 80% building, 20% learning
+2. **Syntax is Lookup, Not Memory** - Use SYNTAX_REFERENCE.md
+3. **Active Recall Works** - Test yourself, don't re-read
+4. **Spaced Repetition** - Review Days 1, 7, 16, 35
+5. **Getting Stuck = Learning** - Struggle 15 min before looking up
+6. **Track Everything** - MY_BUILDS_TRACKER.md
+7. **Quantity > Quality** - 100 messy projects > 10 perfect ones
+
+### New File Structure Per Lesson:
+- **LESSON_GUIDE.md** - Build-first roadmap (main file to start)
+- **BUILD_PROJECTS.md** - 7-10 immediate projects to build
+- **ACTIVE_RECALL.md** - Self-testing flashcards
+- `lesson.py` - Still available for reference
+- `practice.py` - Now optional (projects teach more)
+- `extra_practice.py` - Optional advanced work
 
 ---
 

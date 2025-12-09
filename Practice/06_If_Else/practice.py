@@ -3,81 +3,75 @@
 # ===================================
 
 # Practice 1: Check if a number is greater than 10
-num = int(input("Give me a number. "))
-
-if num > 10:
-    print(f"{num} is greater than 10")
-elif num <= 10:
-    print(f"{num} is not great than 10")
+number = 15
+if number > 10:
+    print("That is greater than 10!")
 
 # Practice 2: Check if a number is even or odd (use %)
-numb = int(input("Give me a number. "))
+number = 13
+if number % 2 == 0:
+    print("That is an even number?")
+else:
+    print("That is an odd number")
 
-if numb % 2 == 1:
-    print(f"{numb} is odd. ")
-elif numb % 2 == 0:
-    print(f"{numb} is even. ")
+
 # Practice 3: Ask user their age, check if they're 18 or older
-age = int(input("What's youre age? "))
-
+age = int(input("What is your age? "))
 if age >= 18:
-    print("You are of age. ")
-elif age < 18:
-    print("You are young. ")
+    print("You are an adult")
+else:
+    print("You are a child")
 
 # Practice 4: Ask for a grade (0-100), print "Pass" or "Fail" (60+ is passing)
 grade = int(input("What is your grade? "))
-
 if grade >= 60:
-    print("You pass! ")
-elif grade < 60:
-    print("You fail! ")
+    print("You passed!")
+else:
+    print("You failed")
 
 # Practice 5: Check if a number is positive, negative, or zero
-number = 10
-
-if number == 0:
-    print("Zero. ")
+number = 13
+if number > 0:
+    print("That is a positive number")
 elif number < 0:
-    print("Negative. ")
-elif number > 0:
-    print("Positive. ")
+    print("That is a negative number")
+else:
+    print("That is 0")
 
 # Practice 6: Ask for temperature, print "hot" (>80), "nice" (60-80), or "cold" (<60)
 temp = int(input("What is the temperature? "))
-
 if temp > 80:
     print("Hot")
-elif temp < 60:
-    print("Cold")
-elif 60 <= temp <= 80:
+elif temp >= 60 and temp <= 80:
     print("Nice")
-    
-# Practice 7: Ask for password, check if it equals "secret123"
-password = input("Enter your password: ")
+else:
+    print("Cold")
 
-if password == "secret123":
-    print("Correct. ")
-elif password != "secret123":
-    print("Incorrect. ")
+# Practice 7: Ask for password, check if it equals "secret123"
+pword = input("What is the password? ")
+if pword == "secret123":
+    print("Correct!")
+else:
+    print("Incorrect")
 
 # Practice 8: Ask for age and if they have a license (yes/no)
 # Determine if they can drive
 age = int(input("What is your age? "))
 license = input("Do you have a license? ")
-
-if age <= 15 or license != "Yes":
-    print(" You cannot drive. ")
-else : print("You can drive. ")
+if age >= 16 and license.lower() == "yes":
+    print("You can drive!")
+else:
+    print("You cannot drive")
 
 # Challenge: Create a voting eligibility checker
 # Ask for name and age
 # If 18+: print "{name}, you can vote!"
 # If under 18: print "{name}, you can vote in {X} years"
 name = input("What is your name? ")
-age = int(input("What is your age?"))
+age = int(input("What is your age?" ))
+almost = 18 - age
+if age >= 18:
+    print(f"{name}, You can vote! ")
+else:
+    print(f"{name}, you can vote in {almost} years! ")
 
-if age < 18:
-    print(f"{name}, you can vote in {18 - age} years. ")
-elif age >= 18:
-    print(f"{name}, you can vote! ")

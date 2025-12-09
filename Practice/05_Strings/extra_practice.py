@@ -8,8 +8,8 @@
 # Exercise 2: Ask for a sentence, count how many characters it has
 
 
-# Exercise 3: Ask for their full name
-# Print just the first letter of their first name
+# Exercise 3: Ask for their first name
+# Print just the first letter
 
 
 # Exercise 4: Create a username from first and last name
@@ -42,14 +42,10 @@
 # Example: Connor O'Malley -> C.O.
 
 
-# Exercise 11: Check if a word contains the letter 'a'
-# Ask for a word, use 'in' to check if 'a' is in the word
+# Exercise 11: Ask for a sentence, print it without the first and last character
 
 
-# Exercise 12: Ask for a sentence, print it without the first and last character
-
-
-# Exercise 13: Create a name tag
+# Exercise 12: Create a name tag
 # Ask for name, print:
 # ************
 # * NAME     *
