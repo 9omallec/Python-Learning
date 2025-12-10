@@ -4,6 +4,14 @@
 
 ---
 
+## Available Tools for These Projects
+
+**Concepts Available:** print(), variables, math, input(), strings, string methods, slicing
+
+**NOT Available Yet:** if/else (Lesson 6)
+
+---
+
 ## Project 1: Text Formatter (15 min)
 
 **Goal:** Create a text formatting tool
@@ -56,33 +64,39 @@ Suggested username: comalley
 
 ---
 
-## Project 3: Email Validator (20 min)
+## Project 3: Email Analyzer (20 min)
 
-**Goal:** Basic email format checker
+**Goal:** Analyze email address structure
 
 **Requirements:**
 - Ask for email address
-- Check if it contains @
-- Check if it contains .
-- Check if @ comes before .
-- Tell user if format looks valid
-- Convert to lowercase
-- Remove extra spaces
+- Show properties (don't validate as valid/invalid):
+  - Count of @ symbols
+  - Count of . symbols
+  - Position of @ symbol (what character number)
+  - Position of . symbol (what character number)
+  - Show cleaned version (lowercase, no extra spaces)
+- Display findings clearly
 
 **Example Interaction:**
 ```
 Enter email: Connor@EMAIL.COM
 
-Checking email...
-✓ Contains @
-✓ Contains .
-✓ @ comes before .
-✓ Format looks valid!
+======= EMAIL ANALYSIS =======
+Original: Connor@EMAIL.COM
+Cleaned: connor@email.com
+
+@ symbol count: 1
+. symbol count: 1
+
+@ position: character 7
+. position: character 12
 
 Cleaned email: connor@email.com
+================================
 ```
 
-**Challenge:** Check for multiple @ symbols (invalid)
+**Challenge:** Show what comes before and after the @ symbol
 
 ---
 
@@ -122,33 +136,37 @@ It was the most amazing day ever!
 
 ---
 
-## Project 5: Password Checker (25 min)
+## Project 5: Password Analyzer (25 min)
 
-**Goal:** Check if password meets requirements
+**Goal:** Analyze password properties
 
 **Requirements:**
 - Ask for password
-- Check length (minimum 8 characters)
-- Check if contains numbers
-- Check if contains uppercase letters
-- Check if contains lowercase letters
-- Give feedback on each requirement
-- Show strength rating
+- Show properties (don't judge as strong/weak):
+  - Length in characters
+  - Count of uppercase letters
+  - Count of lowercase letters
+  - Count of numbers (0-9)
+  - Count of special characters (!@#$% etc)
+- Display all findings clearly
 
 **Example Interaction:**
 ```
-Enter password: Hello123
+Enter password: Hello123!
 
-Checking password strength...
-✓ Length: 8 characters (minimum 8)
-✓ Contains numbers
-✓ Contains uppercase letters
-✓ Contains lowercase letters
+======= PASSWORD ANALYSIS =======
+Length: 9 characters
 
-Password Strength: STRONG
+Character counts:
+- Uppercase letters: 1 (H)
+- Lowercase letters: 4 (e, l, l, o)
+- Numbers: 3 (1, 2, 3)
+- Special characters: 1 (!)
+
+==================================
 ```
 
-**Challenge:** Check for special characters (!@#$%)
+**Challenge:** Show which special characters are present
 
 ---
 
@@ -243,12 +261,12 @@ Hide part of email (connor@email.com → c*****@email.com)
 ```
 Project 1: Text Formatter (14 min) ✓ - 2025-12-08
 Project 2: Username Generator (18 min) ✓ - 2025-12-08
-Project 3: Email Validator (22 min) ✓ - 2025-12-08
+Project 3: Email Analyzer (22 min) ✓ - 2025-12-08
 Project 4: Mad Libs (25 min) ✓ - 2025-12-08
-Project 5: Password Checker (28 min) ✓ - 2025-12-08
+Project 5: Password Analyzer (28 min) ✓ - 2025-12-08
+```
 
 Total: 5 projects, 107 min
-```
 
 ---
 
@@ -320,6 +338,17 @@ print("Hello " + name + ", you are " + str(age))
 # NEW way (do this)
 print(f"Hello {name}, you are {age}")
 ```
+
+---
+
+## Projects Requiring if/else (Available in Lesson 6)
+
+These projects were removed because they need conditional logic:
+
+- **Email Validator** - Required if/else to check validity conditions
+- **Password Checker** - Required if/else to evaluate strength ratings
+
+Once you complete Lesson 6 (if/else statements), return to these projects to add validation and rating features!
 
 ---
 

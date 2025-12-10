@@ -1,6 +1,9 @@
 # Build Projects: User Input
 
-**Stop reading, start interacting**
+**Stop reading, start building**
+
+**Concepts Available:** print(), variables, math, input(), type conversion
+**NOT Available Yet:** if/else (Lesson 6), loops (Lesson 7)
 
 ---
 
@@ -31,7 +34,7 @@ Hobby: Coding
 ==================================
 ```
 
-**Challenge:** Calculate and show birth year
+**Challenge:** Calculate and show birth year (2025 - age)
 
 ---
 
@@ -95,163 +98,200 @@ Each person pays: $25.22
 
 ---
 
-## Project 4: Temperature Converter (15 min)
+## Project 4: Simple Survey (15 min)
 
-**Goal:** Interactive temperature converter
+**Goal:** Collect survey responses and display them
 
 **Requirements:**
-- Ask if converting C to F or F to C
-- Ask for temperature value
-- Calculate conversion
-- Display result clearly
-- Use proper formulas
+- Ask at least 5 survey questions
+- Mix of text and number questions
+- Store all responses
+- Display a summary at the end
+- Make it look organized
 
 **Example Interaction:**
 ```
-Convert (1) Celsius to Fahrenheit or (2) Fahrenheit to Celsius?
-Enter 1 or 2: 1
-Enter temperature in Celsius: 25
+=== QUICK SURVEY ===
 
-25.0°C = 77.0°F
+On a scale of 1-10, how happy are you? 8
+What's your favorite food? Pizza
+How many hours do you sleep? 7
+What's your favorite color? Blue
+How many books did you read this year? 12
+
+=== SURVEY RESULTS ===
+Happiness Level: 8/10
+Favorite Food: Pizza
+Sleep Hours: 7 hours
+Favorite Color: Blue
+Books Read: 12 books
+
+Thanks for participating!
 ```
 
-**Challenge:** Add Kelvin conversions
+**Challenge:** Calculate some statistics (average of numbers)
 
 ---
 
-## Project 5: Simple Quiz Game (20 min)
+## Project 5: Recipe Scaler (15 min)
 
-**Goal:** Create an interactive quiz
+**Goal:** Scale recipe ingredients based on servings
 
 **Requirements:**
-- Ask at least 5 questions
-- Mix different types (math, trivia, etc.)
-- Keep score
-- Tell user if each answer is right or wrong
-- Show final score at end
+- Ask how many servings they want
+- Show original recipe (serves 4)
+- Calculate and show scaled amounts
+- Include at least 5 ingredients
 
 **Example Interaction:**
 ```
-=== QUIZ TIME ===
+=== RECIPE SCALER ===
 
-Question 1: What is 5 + 3?
-Your answer: 8
-Correct!
+Original Recipe (serves 4):
+- 2 cups flour
+- 1 cup sugar
+- 4 eggs
+- 0.5 cup butter
+- 2 tsp vanilla
 
-Question 2: What is the capital of France?
-Your answer: Paris
-Correct!
+How many servings do you want? 8
 
-Question 3: What is 10 / 2?
-Your answer: 5
-Correct!
-
-Final Score: 3/3 - Perfect!
+=== SCALED RECIPE (serves 8) ===
+- 4.0 cups flour
+- 2.0 cups sugar
+- 8.0 eggs
+- 1.0 cups butter
+- 4.0 tsp vanilla
 ```
 
-**Challenge:** Give personalized feedback based on score
+**Challenge:** Add metric conversions (cups to ml)
 
 ---
 
-## Project 6: Mad Libs Story (20 min)
+## Project 6: Travel Distance Calculator (15 min)
 
-**Goal:** Interactive story generator
+**Goal:** Calculate travel times and distances
 
 **Requirements:**
-- Ask for at least 8 words (nouns, verbs, adjectives, etc.)
-- Create a funny story using their words
-- Format nicely
-- Make it entertaining!
+- Ask for distance in miles
+- Ask for speed in mph
+- Calculate travel time
+- Show distance in kilometers
+- Show time in hours and minutes
 
 **Example Interaction:**
 ```
-Let's create a story!
+Enter distance (miles): 150
+Enter speed (mph): 60
 
-Enter a name: Bob
-Enter an adjective: sparkly
-Enter a place: cafeteria
-Enter a verb: dancing
-Enter an animal: penguin
-Enter a food: pizza
-Enter a number: 42
-Enter a color: purple
-
-=== YOUR STORY ===
-One day, Bob went to the cafeteria.
-They were dancing when suddenly a sparkly penguin appeared!
-The penguin was eating pizza and wore 42 purple hats.
-It was the strangest day ever!
-==================
+=== TRAVEL INFO ===
+Distance: 150 miles (241.4 km)
+Speed: 60 mph
+Travel Time: 2.5 hours (2 hours 30 minutes)
 ```
 
-**Challenge:** Create multiple story templates
+**Challenge:** Calculate fuel needed (ask for MPG)
 
 ---
 
-## Project 7: Unit Converter (25 min)
+## Project 7: Shopping List Price Total (15 min)
 
-**Goal:** Multi-purpose unit converter
+**Goal:** Calculate total cost of shopping items
 
 **Requirements:**
-- Ask what type of conversion (distance, weight, volume)
-- Ask for value to convert
-- Ask for from/to units
-- Calculate conversion
-- Show result
+- Ask for 5 item names and prices
+- Calculate subtotal
+- Calculate tax (ask for tax rate)
+- Calculate final total
+- Display itemized list
 
 **Example Interaction:**
 ```
-=== UNIT CONVERTER ===
-What to convert?
-1. Distance (miles/km)
-2. Weight (lbs/kg)
-3. Temperature (F/C)
+Enter item 1 name: Bread
+Enter item 1 price: 2.99
 
-Choose: 1
+Enter item 2 name: Milk
+Enter item 2 price: 3.49
 
-Enter miles: 10
-10.0 miles = 16.09 kilometers
+Enter item 3 name: Eggs
+Enter item 3 price: 4.29
+
+Enter item 4 name: Cheese
+Enter item 4 price: 5.99
+
+Enter item 5 name: Butter
+Enter item 5 price: 4.49
+
+Tax rate (%): 7
+
+=== SHOPPING RECEIPT ===
+Bread:        $2.99
+Milk:         $3.49
+Eggs:         $4.29
+Cheese:       $5.99
+Butter:       $4.49
+-------------------
+Subtotal:    $21.25
+Tax (7%):     $1.49
+-------------------
+TOTAL:       $22.74
 ```
 
-**Challenge:** Add more conversion types
+**Challenge:** Calculate change from $50
 
 ---
 
 ## Bonus Projects
 
-### Bonus 1: BMI Calculator
-Ask for height and weight, calculate BMI, give health category
+### Bonus 1: Age Calculator
+Ask for birth year, calculate age, show in years/months (estimate)
 
-### Bonus 2: Age Calculator
-Ask for birth year, calculate age, show in years/months/days
+### Bonus 2: Loan Payment Display
+Ask for loan amount, rate, term - display monthly payment (formula given)
 
-### Bonus 3: Password Strength Checker
-Ask for password, check length and give strength rating
+### Bonus 3: Height Converter
+Ask for height in inches, show in feet/inches and centimeters
 
-### Bonus 4: Grade Calculator
-Ask for multiple test scores, calculate average, show letter grade
+### Bonus 4: Weight Tracker
+Ask for start weight and current weight, calculate difference and percentage
 
-### Bonus 5: Loan Calculator
-Ask for loan amount, rate, term - calculate monthly payment
+### Bonus 5: Class Grade Average
+Ask for 5 test scores, calculate and display average
 
-### Bonus 6: Shipping Cost Calculator
-Ask for weight and distance, calculate shipping cost
+### Bonus 6: Paycheck Calculator
+Ask for hourly rate and hours worked, calculate gross pay and estimated take-home (70%)
 
-### Bonus 7: Movie Ticket System
-Ask for tickets, apply discounts, calculate total
+### Bonus 7: Savings Goal Tracker
+Ask for goal amount and monthly savings, calculate months needed
+
+---
+
+## Projects REMOVED (Require if/else - Coming in Lesson 6!)
+
+These projects are GREAT but need conditional logic you haven't learned yet:
+
+- ~~Quiz Game~~ → Moved to Lesson 6
+- ~~Unit Converter with Menu~~ → Moved to Lesson 6
+- ~~BMI with Categories~~ → Moved to Lesson 6
+- ~~Password Strength Checker~~ → Moved to Lesson 6
+- ~~Grade Calculator with Letter Grades~~ → Moved to Lesson 6
+
+Don't worry - you'll build these soon after learning if/else!
 
 ---
 
 ## Track Your Progress
 
 ```
-Project 1: Personal Info (14 min) ✓ - 2025-12-08
-Project 2: Calculator (18 min) ✓ - 2025-12-08
-Project 3: Bill Splitter (22 min) ✓ - 2025-12-08
-Project 4: Temperature (15 min) ✓ - 2025-12-08
-Project 5: Quiz Game (25 min) ✓ - 2025-12-08
+Project 1: Info Collector   ( __ min) □
+Project 2: Calculator       ( __ min) □
+Project 3: Bill Splitter    ( __ min) □
+Project 4: Survey           ( __ min) □
+Project 5: Recipe Scaler    ( __ min) □
+Project 6: Travel Calc      ( __ min) □
+Project 7: Shopping Total   ( __ min) □
 
-Total: 5 projects, 94 min
+Total: ___ projects, ___ minutes
 ```
 
 ---
@@ -263,7 +303,7 @@ Total: 5 projects, 94 min
 - [ ] Can convert strings to int/float
 - [ ] Programs work with different user inputs
 - [ ] Each project took under 25 minutes
-- [ ] Your programs are actually interactive!
+- [ ] Your programs actually interact!
 
 ---
 
@@ -273,7 +313,7 @@ Total: 5 projects, 94 min
 ```python
 # WRONG
 age = input("Age: ")
-next_year = age + 1  # Error!
+next_year = age + 1  # Error! Can't add to string
 
 # RIGHT
 age = int(input("Age: "))
@@ -300,4 +340,4 @@ price = float(input("Price: "))
 
 ---
 
-**Pro tip:** Every great app is interactive. You just learned how to get user input - that's HUGE!
+**Note:** This lesson ONLY uses concepts from Lessons 1-4. All projects can be completed without if/else or loops!
