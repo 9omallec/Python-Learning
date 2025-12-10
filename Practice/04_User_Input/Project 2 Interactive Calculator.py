@@ -1,0 +1,12 @@
+x = int(input("Please give me a number: "))
+y = int(input("Please give me another number: "))
+
+print("*--*   Results   *--*")
+print(f"{x}  +  {y} = {x + y}")
+print(f"{x}  -  {y} = {x - y}")
+print(f"{x}  *  {y} = {x * y}")
+print(f"{x}  /  {y} = {x / y}")
+print(f"{x}  %  {y} = {x % y}")
+print(f"{x}  ** {y} = {x ** y}")
+print(f"{x}  // {y} = {x // y}")
+print("*********************")
