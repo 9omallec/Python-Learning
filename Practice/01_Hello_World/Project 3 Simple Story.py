@@ -1,0 +1,1 @@
+print("Once upone a time, There was this guy trying to learn python \nUnfortunately he did not have a whole lot of time. He also was not very smart. \nbut he is still going to try!")
