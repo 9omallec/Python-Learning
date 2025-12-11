@@ -3,7 +3,7 @@ temp = int(input("What is the temperature? "))
 f = (temp * 9 / 5) + 32
 c = (temp - 32) * 5 / 9
 
-if input == 1:
+if convert == 1:
     print(f"{round(temp)}°C = {round(f, 2)}°F")
 else:
     print(f"{round(temp)}°F = {round(c, 2)}°C")

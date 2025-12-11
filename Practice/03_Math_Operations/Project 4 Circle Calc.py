@@ -1,8 +1,8 @@
 radius = 7
 π = 3.14159
 circumference = round(2 * π * radius, 5)
-area = round((π * radius) ** 2, 5)
-diameter = round(2 * π, 5)
+area = round(π * radius ** 2, 5)
+diameter = 2 * π
 volume_sphere = round(4 / 3 * π * radius ** 3, 5)
 area_sphere = round(4 * π * radius ** 2, 5)
 
