@@ -6,14 +6,22 @@
 
 
 
-count = 0
-answer = 7
+import tkinter
+from PIL import ImageTk, Image
+import os
 
-while True:
-    count += 1
-    guess = int(input("Pick a number from 1-10: "))
-    if guess != 7:
-        print("Try again! ")
-    elif guess == 7:
-        print(f"Correct! it took you {count} number of tries" )
-        break
+# creating main window
+root = tkinter.Tk()
+
+# loading the image
+img = ImageTk.PhotoImage(Image.open("gfg.jpeg"))
+
+# reading the image
+panel = tkinter.Label(root, image = img)
+
+# setting the application
+panel.pack(side = "bottom", fill = "both",
+           expand = "yes")
+
+# running the application
+root.mainloop()
