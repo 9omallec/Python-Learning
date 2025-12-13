@@ -7,7 +7,7 @@ root = tk.Tk()
 root.title("Image Randomizer")
 
 # Widgets...
-response = requests.get("https://picsum.photos/200/300")
+
 
 message = "Choose Image Size"
 message = tk.Label(root, text = message)
@@ -26,8 +26,7 @@ width.config(fg = 'purple')
 width.grid(row = 3, column = 1)
 
 
-button = tk.Button(root, text = 'Stop', width = 25, command = root.destroy) #Stop Button
+button = tk.Button(root, text = 'Get', width = 25, command = input(height + width)) # Button
 button.grid(row = 4, column = 1)
-
-
+requests.get("https://picsum.photos/200/300"
 root.mainloop()
