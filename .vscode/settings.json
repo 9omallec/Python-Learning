@@ -1,0 +1,37 @@
+{
+  // General Python Learning settings
+  "python.defaultInterpreterPath": "python",
+
+  // File exclusions (keep sidebar clean)
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true
+  },
+
+  // Search exclusions (faster searches)
+  "search.exclude": {
+    "**/venv": true,
+    "**/.venv": true,
+    "**/env": true,
+    "**/__pycache__": true
+  },
+
+  // Editor preferences
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [80, 120],
+
+  // Python settings for practice files
+  "python.linting.enabled": false,
+  "python.formatting.provider": "none",
+
+  // Git
+  "git.ignoreLimitWarning": true,
+
+  // Terminal
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // Format on save (good practice for learning)
+  "editor.formatOnSave": false
+}

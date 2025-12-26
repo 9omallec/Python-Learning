@@ -12,8 +12,9 @@ venv/
 env/
 ENV/
 
-# IDE settings
-.vscode/
+# IDE settings (personal preferences)
+/.vscode/          # Ignore root .vscode (personal settings)
+!Projects/**/.vscode/  # But keep project-specific .vscode (team settings)
 .idea/
 
 # OS files
