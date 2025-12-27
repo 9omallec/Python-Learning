@@ -1,6 +1,5 @@
 num = int(input("What is the number?"))
 
-
 for num in range(1, num + 1):
     fizz = (num % 3) == 0
     buzz = (num % 5) == 0
