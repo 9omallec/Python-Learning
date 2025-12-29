@@ -1,17 +1,26 @@
 import tkinter as tk
 import requests
 import json
+import random
 from PIL import Image, ImageTk
 from io import BytesIO
 
 # Search Functionality
-def search_pokemon():
-    pokemon_name = name_entry.get().lower()
-    url = 'https://pokeapi.co/api/v2/pokemon/'
-    response = requests.get(url + pokemon_name)
+def search_pokemon(pokemon_id=None):
+    if pokemon_id is None:
+        pokemon_name = name_entry.get().lower()
+        url = 'https://pokeapi.co/api/v2/pokemon/' + pokemon_name
+    else:
+        url = 'https://pokeapi.co/api/v2/pokemon/' + str(pokemon_id)
+
+    response = requests.get(url)
 
     if response.ok:
         data = response.json()
+        species_url = data['species']['url']
+        species_response = requests.get(species_url)
+        species_data = species_response.json()
+
         sprite = data['sprites']['front_default']
         sprite_response = requests.get(sprite)
         img_data = BytesIO(sprite_response.content)
@@ -48,6 +57,9 @@ def search_pokemon():
             else:
                 abilities.append(ability_name)
 
+
+
+
         # Clear and populate name/ID text widget with bold labels
         name_id_label.config(state='normal')
         name_id_label.delete('1.0', 'end')
@@ -80,12 +92,15 @@ def search_pokemon():
         info_label.insert('end', "Pokemon not found!")
         info_label.config(state='disabled')
 
+def random_pokemon():
+    random_id = random.randint(1, 151)
+    search_pokemon(random_id)
 
 
 # Main Window
 window = tk.Tk()
 window.title("Pokemon Info Generator")
-window.geometry('500x600')
+window.geometry('500x700')
 window.config(bg='red')
 
 # Blue circle (Pokedex light)
@@ -124,20 +139,23 @@ green_circle.create_oval(3, 3, 18, 18, fill='dark green', outline='')  # Shadow
 green_circle.create_oval(2, 2, 17, 17, fill='green', outline='dark grey', width=2)
 green_circle.create_oval(4, 3, 9, 8, fill='light green', outline='')
 
-# Search Frame (centered)
-search_frame = tk.Frame(window, bg='light blue', relief='sunken', borderwidth=4, highlightbackground='black', highlightthickness=2)
-search_frame.pack(pady=10)
+# Search Frame
+search_frame = tk.Frame(window, bg='light blue', relief='sunken', borderwidth=2, highlightthickness=0)
+search_frame.pack(pady=(40, 10))
 # Input Field
 name_label = tk.Label(search_frame, text="Enter Pokemon Name: ", bg='light blue')
 name_label.pack()
-name_entry = tk.Entry(search_frame, width=30)
+name_entry = tk.Entry(search_frame, width=30, bg='white', fg='black', relief='solid', borderwidth=1)
 name_entry.pack()
 # Search Button
 search_button = tk.Button(search_frame, text="Search Pokemon", command=search_pokemon)
-search_button.pack()
+search_button.pack(pady=2)
+# Random Button
+random_button = tk.Button(search_frame, text='Random', command=random_pokemon, bg='gold', fg='black')
+random_button.pack(pady=2)
 # Decorative separator line
 separator_canvas = tk.Canvas(window, width=500, height=60, bg='red', highlightthickness=0)
-separator_canvas.place(x=0, y=90)
+separator_canvas.place(x=0, y=165)
 # Shadow line
 separator_canvas.create_line(
     0, 25,
@@ -169,21 +187,21 @@ separator_canvas.create_line(
 
 # Data display frame
 data_frame = tk.Frame(window, bg='light blue', relief='sunken', borderwidth=4, highlightbackground='black', highlightthickness=2)
-data_frame.pack(pady=(30, 10))
+data_frame.pack(pady=(75, 10))
     # Name/ID text widget
-name_id_label = tk.Text(data_frame, font=('Arial', 13), bg='light blue', width=15, height=2, borderwidth=0, highlightthickness=0)
+name_id_label = tk.Text(data_frame, font=('Arial', 13), bg='light blue', fg='black', width=15, height=2, borderwidth=0, highlightthickness=0)
 name_id_label.grid(row=0, column=0, sticky='nw', padx=10, pady=(10, 5))
 name_id_label.tag_configure('bold', font=('Arial', 13, 'bold'))
     # Sprite label
 sprite_label = tk.Label(data_frame, bg='light blue')
 sprite_label.grid(row=1, column=0, padx=10, pady=(5, 10))
     # Info text widget
-info_label = tk.Text(data_frame, font=('Arial', 12), bg='light blue', width=28, height=14, borderwidth=0, highlightthickness=0)
+info_label = tk.Text(data_frame, font=('Arial', 12), bg='light blue', fg='black', width=28, height=14, borderwidth=0, highlightthickness=0)
 info_label.grid(row=0, column=1, rowspan=2, sticky='n', padx=10, pady=10)
 info_label.tag_configure('bold', font=('Arial', 12, 'bold'))
     # Bottom decorative separator line
 bottom_separator = tk.Canvas(window, width=500, height=20, bg='red', highlightthickness=0)
-bottom_separator.place(x=0, y=440)
+bottom_separator.place(x=0, y=540)
     # Shadow line (darker, above main line - reversed)
 bottom_separator.create_line(
     0, 2,
