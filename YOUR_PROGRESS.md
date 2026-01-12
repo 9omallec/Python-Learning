@@ -1,19 +1,19 @@
 # 📈 Your Learning Progress
 
-**Last Updated**: December 30, 2024
+**Last Updated**: January 12, 2026
 
 ---
 
 ## 🎯 Current Status
 
-**You are here**: Phase 1 - Python Fundamentals (69% complete)
-**Next milestone**: Complete Lesson 10 & 11, then move to OOP
+**You are here**: Phase 1 - Python Fundamentals (77% complete)
+**Next milestone**: Complete Lessons 12 & 13 (OOP and File I/O)
 
 ---
 
 ## Phase 1: Python Fundamentals ⏳
 
-### ✅ Completed (9/13 lessons)
+### ✅ Completed (10/13 lessons)
 - [x] Lesson 01: Hello World & Print
 - [x] Lesson 02: Variables & Data Types
 - [x] Lesson 03: Math Operations
@@ -23,13 +23,11 @@
 - [x] Lesson 07: Loops (For/While)
 - [x] Lesson 08: Lists
 - [x] Lesson 09: Functions
+- [x] Lesson 10: Dictionaries
 
-### 🔄 In Progress (2 lessons)
-- [ ] Lesson 10: Dictionaries → **WORK ON THIS NEXT**
-- [ ] Lesson 11: Coding Challenges (FizzBuzz ✅, need 4-7 more)
-
-### 📝 Coming Soon (2 lessons)
-- [ ] Lesson 12: OOP Basics (classes, objects)
+### 🔄 In Progress (3 lessons)
+- [ ] Lesson 11: Coding Challenges (FizzBuzz ✅, optional: do 4-7 more)
+- [ ] Lesson 12: OOP Basics (classes, objects) → **START HERE**
 - [ ] Lesson 13: File I/O (reading/writing files)
 
 **Phase 1 Target**: Complete by Week 3
@@ -87,6 +85,7 @@
 ### Your Original Work:
 - [x] **Weather CLI App** - API integration, 5-day forecasts, error handling
 - [x] **Pokedex GUI** - tkinter interface, evolution chains, sprite display
+- [x] **Inventory System** - Menu-driven CRUD app with dictionaries (Challenge 1)
 - [x] **FizzBuzz** - Classic coding challenge (solved independently!)
 
 ### To Study:
