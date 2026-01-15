@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .exercise {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .challenge {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .hint {
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 4px solid #2196F3;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Practice Exercises</h1>
+    <p><strong>Instructions:</strong></p>
+    <ul>
+        <li>Complete each exercise by writing JavaScript code</li>
+        <li>Open browser console (F12) to see console.log() output</li>
+        <li>Test your code by clicking the "Test" buttons</li>
+        <li>Check hints if you're stuck</li>
+    </ul>
+
+    <!-- EXERCISE 1 -->
+    <div class="exercise">
+        <h2>Exercise 1: Variables and Basic Math</h2>
+        <p><strong>Task:</strong> Create variables for your name, age, and favorite number. Calculate your age in 10 years.</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Create variables: <code>name</code>, <code>age</code>, <code>favoriteNumber</code></li>
+            <li>Calculate <code>ageIn10Years</code></li>
+            <li>Use console.log() to print: "My name is [name], I am [age] years old, and in 10 years I'll be [ageIn10Years]"</li>
+        </ol>
+        <button onclick="testExercise1()">Test Exercise 1</button>
+        <div class="hint">
+            <strong>Hint:</strong> Use <code>let</code> for variables. Use template literals: <code>`My name is ${name}`</code>
+        </div>
+    </div>
+
+    <!-- EXERCISE 2 -->
+    <div class="exercise">
+        <h2>Exercise 2: Functions</h2>
+        <p><strong>Task:</strong> Create a function that greets a user and tells them if they're an adult.</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Write a function <code>greetUser(name, age)</code></li>
+            <li>It should return: "Hello [name]! You are an adult." if age >= 18</li>
+            <li>Otherwise: "Hello [name]! You are not an adult yet."</li>
+        </ol>
+        <button onclick="testExercise2()">Test Exercise 2</button>
+        <div class="hint">
+            <strong>Hint:</strong> Use if/else inside the function. Remember to <code>return</code> the string!
+        </div>
+    </div>
+
+    <!-- EXERCISE 3 -->
+    <div class="exercise">
+        <h2>Exercise 3: Arrays</h2>
+        <p><strong>Task:</strong> Work with an array of Pokemon names.</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Create an array: <code>pokemon = ["Pikachu", "Charizard", "Bulbasaur"]</code></li>
+            <li>Add "Squirtle" to the array using <code>.push()</code></li>
+            <li>Use <code>.map()</code> to create a new array where each name is uppercase</li>
+            <li>Use <code>.filter()</code> to find Pokemon with names longer than 8 characters</li>
+            <li>Log all results to console</li>
+        </ol>
+        <button onclick="testExercise3()">Test Exercise 3</button>
+        <div class="hint">
+            <strong>Hint:</strong> <code>name.toUpperCase()</code> makes strings uppercase. <code>name.length</code> gets string length.
+        </div>
+    </div>
+
+    <!-- EXERCISE 4 -->
+    <div class="exercise">
+        <h2>Exercise 4: Objects</h2>
+        <p><strong>Task:</strong> Create a Pokemon object with properties.</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Create an object with: name, type, level, hp, moves (array)</li>
+            <li>Add a method <code>attack()</code> that logs: "[name] uses [first move]!"</li>
+            <li>Add a method <code>levelUp()</code> that increases level by 1</li>
+            <li>Test both methods</li>
+        </ol>
+        <button onclick="testExercise4()">Test Exercise 4</button>
+        <div class="hint">
+            <strong>Hint:</strong> Methods are functions inside objects. Use <code>this.propertyName</code> to access properties.
+        </div>
+    </div>
+
+    <!-- EXERCISE 5 -->
+    <div class="exercise">
+        <h2>Exercise 5: Loops</h2>
+        <p><strong>Task:</strong> FizzBuzz in JavaScript! (Remember this?)</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Loop from 1 to 20</li>
+            <li>If divisible by 3: log "Fizz"</li>
+            <li>If divisible by 5: log "Buzz"</li>
+            <li>If divisible by both: log "FizzBuzz"</li>
+            <li>Otherwise: log the number</li>
+        </ol>
+        <button onclick="testExercise5()">Test Exercise 5</button>
+        <div class="hint">
+            <strong>Hint:</strong> Use a for loop. Check divisible by 15 first, then 3, then 5.
+        </div>
+    </div>
+
+    <!-- EXERCISE 6 -->
+    <div class="exercise">
+        <h2>Exercise 6: DOM Manipulation - Click Counter</h2>
+        <p><strong>Task:</strong> Make a button that counts clicks.</p>
+        <p>Clicks: <span id="clickCount">0</span></p>
+        <button id="clickButton">Click Me!</button>
+        <button onclick="resetCounter()">Reset</button>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Add an event listener to <code>#clickButton</code></li>
+            <li>Each click should increase a counter</li>
+            <li>Update the <code>#clickCount</code> span with the new count</li>
+            <li>Implement the reset function</li>
+        </ol>
+        <div class="hint">
+            <strong>Hint:</strong> Use <code>document.getElementById()</code> and <code>.addEventListener('click', function)</code>
+        </div>
+    </div>
+
+    <!-- EXERCISE 7 -->
+    <div class="exercise">
+        <h2>Exercise 7: Input Validation</h2>
+        <p><strong>Task:</strong> Validate user input in real-time.</p>
+        <input type="text" id="usernameInput" placeholder="Enter username (4-12 characters)">
+        <div id="validationMessage"></div>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Listen for 'input' events on the text field</li>
+            <li>If username is 4-12 characters: show green "Valid!" message</li>
+            <li>If too short: show red "Too short!" message</li>
+            <li>If too long: show red "Too long!" message</li>
+        </ol>
+        <div class="hint">
+            <strong>Hint:</strong> Use <code>.addEventListener('input', ...)</code> and <code>value.length</code>
+        </div>
+    </div>
+
+    <!-- EXERCISE 8 -->
+    <div class="exercise">
+        <h2>Exercise 8: Background Color Changer</h2>
+        <p><strong>Task:</strong> Change the background color of this exercise box.</p>
+        <button onclick="changeColor('lightblue')">Blue</button>
+        <button onclick="changeColor('lightgreen')">Green</button>
+        <button onclick="changeColor('lightcoral')">Red</button>
+        <button onclick="changeColor('white')">Reset</button>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Write the <code>changeColor(color)</code> function</li>
+            <li>It should change the background color of this exercise div</li>
+            <li>Hint: This div has a class "exercise"</li>
+        </ol>
+        <div class="hint">
+            <strong>Hint:</strong> Use <code>document.querySelectorAll('.exercise')[7]</code> to get this div, then change <code>.style.backgroundColor</code>
+        </div>
+    </div>
+
+    <!-- CHALLENGE 1 -->
+    <div class="exercise challenge">
+        <h2>Challenge 1: Temperature Converter</h2>
+        <p><strong>Task:</strong> Build a Celsius to Fahrenheit converter.</p>
+        <input type="number" id="celsiusInput" placeholder="Celsius">
+        <button onclick="convertTemp()">Convert</button>
+        <div id="tempResult"></div>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Get the value from the input field</li>
+            <li>Convert to Fahrenheit: F = (C × 9/5) + 32</li>
+            <li>Display result: "[C]°C = [F]°F"</li>
+            <li>Handle empty input with an error message</li>
+        </ol>
+    </div>
+
+    <!-- CHALLENGE 2 -->
+    <div class="exercise challenge">
+        <h2>Challenge 2: Simple To-Do List</h2>
+        <p><strong>Task:</strong> Build a to-do list app.</p>
+        <input type="text" id="todoInput2" placeholder="Enter task">
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="clearAllTasks()">Clear All</button>
+        <ul id="taskList"></ul>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>When "Add Task" is clicked, add the task to the list</li>
+            <li>Each task should have a "Delete" button next to it</li>
+            <li>Clicking "Delete" should remove that specific task</li>
+            <li>"Clear All" should remove all tasks</li>
+            <li>Clear the input field after adding</li>
+        </ol>
+    </div>
+
+    <!-- CHALLENGE 3 -->
+    <div class="exercise challenge">
+        <h2>Challenge 3: Pokemon Searcher</h2>
+        <p><strong>Task:</strong> Fetch Pokemon data from PokeAPI.</p>
+        <input type="text" id="pokeSearch" placeholder="Pokemon name">
+        <button onclick="searchPokemon()">Search</button>
+        <div id="pokeResult"></div>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Use <code>fetch()</code> to call: https://pokeapi.co/api/v2/pokemon/[name]</li>
+            <li>Display: name, height, weight, types, and sprite image</li>
+            <li>Handle errors (Pokemon not found)</li>
+            <li>Show "Loading..." while fetching</li>
+        </ol>
+        <div class="hint">
+            <strong>Hint:</strong> Use <code>async function</code> with <code>await fetch()</code> and <code>try/catch</code>
+        </div>
+    </div>
+
+    <!-- CHALLENGE 4 -->
+    <div class="exercise challenge">
+        <h2>Challenge 4: Array Methods Practice</h2>
+        <p><strong>Task:</strong> Process an array of numbers using various methods.</p>
+        <button onclick="processNumbers()">Process Numbers</button>
+        <div id="numberResult"></div>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Start with: <code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></li>
+            <li>Find all even numbers</li>
+            <li>Square each even number</li>
+            <li>Calculate the sum of squared evens</li>
+            <li>Display each step in the result div</li>
+        </ol>
+    </div>
+
+    <!-- CHALLENGE 5 -->
+    <div class="exercise challenge">
+        <h2>Challenge 5: Build Your Own Feature!</h2>
+        <p><strong>Task:</strong> Create something original combining what you learned.</p>
+        <p><strong>Ideas:</strong></p>
+        <ul>
+            <li>Password strength checker</li>
+            <li>Random quote generator</li>
+            <li>Simple calculator</li>
+            <li>Color palette generator</li>
+            <li>Typing speed test</li>
+        </ul>
+        <p>Use the space below or create your own section!</p>
+        <div id="customFeature">
+            <!-- Your custom HTML goes here -->
+        </div>
+    </div>
+
+    <!-- JavaScript Below -->
+    <script>
+        console.log("Practice exercises loaded! Complete the exercises above.");
+        console.log("Write your code in the <script> section at the bottom of this file.");
+
+        // EXERCISE 1: Write your code here
+        function testExercise1() {
+            console.log("=== EXERCISE 1 ===");
+            // YOUR CODE HERE
+
+            console.log("Complete this exercise!");
+        }
+
+        // EXERCISE 2: Write your code here
+        function greetUser(name, age) {
+            // YOUR CODE HERE
+        }
+
+        function testExercise2() {
+            console.log("=== EXERCISE 2 ===");
+            console.log(greetUser("Alice", 25));
+            console.log(greetUser("Bob", 15));
+        }
+
+        // EXERCISE 3: Write your code here
+        function testExercise3() {
+            console.log("=== EXERCISE 3 ===");
+            // YOUR CODE HERE
+
+            console.log("Complete this exercise!");
+        }
+
+        // EXERCISE 4: Write your code here
+        function testExercise4() {
+            console.log("=== EXERCISE 4 ===");
+            // YOUR CODE HERE
+
+            console.log("Complete this exercise!");
+        }
+
+        // EXERCISE 5: Write your code here
+        function testExercise5() {
+            console.log("=== EXERCISE 5 ===");
+            // YOUR CODE HERE (FizzBuzz!)
+
+            console.log("Complete this exercise!");
+        }
+
+        // EXERCISE 6: Write your code here
+        let clickCount = 0;
+        // Add event listener for click button here
+
+        function resetCounter() {
+            // YOUR CODE HERE
+        }
+
+        // EXERCISE 7: Write your code here
+        // Add event listener for username input here
+
+        // EXERCISE 8: Write your code here
+        function changeColor(color) {
+            // YOUR CODE HERE
+        }
+
+        // CHALLENGE 1: Write your code here
+        function convertTemp() {
+            // YOUR CODE HERE
+        }
+
+        // CHALLENGE 2: Write your code here
+        function addTask() {
+            // YOUR CODE HERE
+        }
+
+        function clearAllTasks() {
+            // YOUR CODE HERE
+        }
+
+        // CHALLENGE 3: Write your code here
+        async function searchPokemon() {
+            // YOUR CODE HERE (use fetch!)
+        }
+
+        // CHALLENGE 4: Write your code here
+        function processNumbers() {
+            // YOUR CODE HERE
+        }
+
+        // CHALLENGE 5: Your custom feature code here!
+
+    </script>
+
+</body>
+</html>

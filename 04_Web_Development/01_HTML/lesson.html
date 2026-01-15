@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lesson - Structure of the Web</title>
+</head>
+<body>
+    <!--
+    ===================================
+    LESSON: HTML Basics
+    ===================================
+
+    HTML = HyperText Markup Language
+    - It's the STRUCTURE of every webpage
+    - Like the skeleton of a building
+    - Tells the browser what content to display
+
+    HOW TO VIEW THIS FILE:
+    1. Right-click this file
+    2. Choose "Open with" → Your web browser
+    3. See the rendered HTML!
+
+    You can also use Live Server extension in VS Code
+    ===================================
+    -->
+
+    <h1>Welcome to HTML!</h1>
+
+    <p>This is a paragraph. HTML uses "tags" to define content.</p>
+
+    <!--
+    PART 1: WHAT ARE TAGS?
+
+    Tags are instructions wrapped in angle brackets: < >
+
+    Most tags come in pairs:
+    <tagname>content</tagname>
+
+    Opening tag: <p>
+    Closing tag: </p>
+
+    The "/" means "closing"
+    -->
+
+    <h2>Headings (6 Levels)</h2>
+    <h1>This is H1 - Biggest</h1>
+    <h2>This is H2</h2>
+    <h3>This is H3</h3>
+    <h4>This is H4</h4>
+    <h5>This is H5</h5>
+    <h6>This is H6 - Smallest</h6>
+
+    <h2>Paragraphs and Text</h2>
+    <p>This is a paragraph. It's the most common text element.</p>
+    <p>Each paragraph gets its own line with space above and below.</p>
+
+    <p>You can make text <strong>bold</strong> or <em>italic</em>.</p>
+    <p>You can also <mark>highlight</mark> or <del>strike through</del> text.</p>
+
+    <h2>Lists</h2>
+
+    <h3>Unordered List (Bullets)</h3>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h3>Ordered List (Numbers)</h3>
+    <ol>
+        <li>Step one</li>
+        <li>Step two</li>
+        <li>Step three</li>
+    </ol>
+
+    <h2>Links</h2>
+    <p>Links use the anchor tag with href attribute:</p>
+    <a href="https://www.google.com">Click here to go to Google</a>
+
+    <p>Open link in new tab:</p>
+    <a href="https://www.google.com" target="_blank">Google (new tab)</a>
+
+    <h2>Images</h2>
+    <p>Images use the img tag (self-closing, no closing tag needed):</p>
+    <img src="https://via.placeholder.com/300x200" alt="Placeholder image">
+
+    <p>The 'alt' attribute describes the image (important for accessibility!)</p>
+
+    <h2>Divs and Spans</h2>
+    <p>These are container elements:</p>
+
+    <div style="background-color: lightblue; padding: 10px;">
+        <p><strong>DIV</strong> = Block-level container (takes full width)</p>
+        <p>Good for grouping content</p>
+    </div>
+
+    <p>A <span style="background-color: yellow;">SPAN</span> is inline (stays in the text flow)</p>
+
+    <h2>Forms and Inputs</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Subscribe to newsletter</label>
+        <br><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2>Tables</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>30</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>35</td>
+                <td>Chicago</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Semantic HTML (Important!)</h2>
+    <p>Modern HTML uses semantic tags that describe their content:</p>
+
+    <header style="background-color: #f0f0f0; padding: 10px;">
+        <h3>This is a HEADER element</h3>
+        <p>Used for introductory content or navigation</p>
+    </header>
+
+    <nav style="background-color: #e0e0e0; padding: 10px;">
+        <p><strong>NAV</strong> = Navigation links</p>
+        <a href="#">Home</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+    </nav>
+
+    <main style="background-color: #f8f8f8; padding: 10px;">
+        <article>
+            <h3>ARTICLE element</h3>
+            <p>Independent, self-contained content (blog post, news article, etc.)</p>
+        </article>
+
+        <section>
+            <h3>SECTION element</h3>
+            <p>Thematic grouping of content</p>
+        </section>
+
+        <aside style="background-color: #ffeecc; padding: 10px;">
+            <p><strong>ASIDE</strong> = Sidebar content (related but not main)</p>
+        </aside>
+    </main>
+
+    <footer style="background-color: #d0d0d0; padding: 10px;">
+        <p><strong>FOOTER</strong> = Bottom content (copyright, links, etc.)</p>
+    </footer>
+
+    <h2>Comments</h2>
+    <p>Comments are notes in your code that the browser ignores:</p>
+    <!-- This is a comment. It won't show on the page. -->
+    <p>Look at the HTML source to see comments!</p>
+
+    <hr>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+        <li>HTML provides the STRUCTURE of a webpage</li>
+        <li>Tags are wrapped in angle brackets: &lt;tagname&gt;</li>
+        <li>Most tags need opening and closing: &lt;p&gt;text&lt;/p&gt;</li>
+        <li>Attributes add extra info: &lt;a href="url"&gt;</li>
+        <li>Semantic tags make your code meaningful and accessible</li>
+        <li>HTML alone is just structure - CSS makes it pretty, JS makes it interactive</li>
+    </ul>
+
+    <hr>
+
+    <h2>Next Steps</h2>
+    <ol>
+        <li>Open this file in your browser to see it rendered</li>
+        <li>Try changing text and see what happens</li>
+        <li>Open practice.html to build your own HTML</li>
+        <li>Use W3Schools for additional examples and practice</li>
+    </ol>
+
+</body>
+</html>

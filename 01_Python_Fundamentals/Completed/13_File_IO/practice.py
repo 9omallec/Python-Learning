@@ -193,13 +193,13 @@ class Inventory:
 
 
 # Test your Inventory:
-inv = Inventory()
-inv.add_item('mouse', 5)
-inv.add_item('keyboard', 10)
-inv.display()
-inv.update_quantity('mouse', 8)
-inv.display()
-# Now close and restart your program - inventory should persist!
+# inv = Inventory()
+# inv.add_item('mouse', 5)
+# inv.add_item('keyboard', 10)
+# inv.display()
+# inv.update_quantity('mouse', 8)
+# inv.display()
+# # Now close and restart your program - inventory should persist!
 
 
 # Challenge 2: Create a Todo List with Persistence

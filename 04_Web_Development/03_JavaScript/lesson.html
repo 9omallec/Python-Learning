@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lesson - Interactive Examples</title>
+    <style>
+        /* Basic styling so you can focus on JavaScript */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .example {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input, textarea {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .output {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 4px solid #4CAF50;
+            font-family: monospace;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Interactive Lessons</h1>
+    <p><strong>Instructions:</strong> Open your browser console (F12 → Console tab) to see output from console.log() statements!</p>
+
+    <!-- SECTION 1: BASICS -->
+    <div class="example">
+        <h2>1. Variables and Data Types</h2>
+        <p>JavaScript has three ways to declare variables: <code>let</code>, <code>const</code>, and <code>var</code> (old way, avoid it).</p>
+        <button onclick="showVariables()">Run Variable Examples</button>
+        <div id="varOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 2: FUNCTIONS -->
+    <div class="example">
+        <h2>2. Functions</h2>
+        <p>Functions work like Python, but with different syntax. Try both styles!</p>
+        <button onclick="showFunctions()">Run Function Examples</button>
+        <div id="funcOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 3: ARRAYS -->
+    <div class="example">
+        <h2>3. Arrays (Like Python Lists)</h2>
+        <p>Arrays are ordered collections. They have powerful methods!</p>
+        <button onclick="showArrays()">Run Array Examples</button>
+        <div id="arrayOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 4: OBJECTS -->
+    <div class="example">
+        <h2>4. Objects (Like Python Dictionaries)</h2>
+        <p>Objects store key-value pairs. Very similar to Python dicts!</p>
+        <button onclick="showObjects()">Run Object Examples</button>
+        <div id="objOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 5: CONDITIONALS -->
+    <div class="example">
+        <h2>5. Conditionals</h2>
+        <p>If/else works just like Python, different syntax!</p>
+        <label>Enter a number: </label>
+        <input type="number" id="numInput" value="15">
+        <button onclick="checkNumber()">Check Number</button>
+        <div id="condOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 6: LOOPS -->
+    <div class="example">
+        <h2>6. Loops</h2>
+        <p>For loops, while loops, and modern array iteration methods.</p>
+        <button onclick="showLoops()">Run Loop Examples</button>
+        <div id="loopOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 7: DOM MANIPULATION -->
+    <div class="example">
+        <h2>7. DOM Manipulation (Changing HTML)</h2>
+        <p>This is what makes JavaScript powerful - change the webpage itself!</p>
+        <button onclick="changePage()">Change This Page!</button>
+        <button onclick="resetPage()">Reset</button>
+        <p id="changeable">This text will change!</p>
+        <div id="domOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 8: EVENT LISTENERS -->
+    <div class="example">
+        <h2>8. Event Listeners (Responding to Actions)</h2>
+        <p>Listen for user interactions and respond!</p>
+        <input type="text" id="nameInput" placeholder="Type your name">
+        <div id="greeting"></div>
+    </div>
+
+    <!-- SECTION 9: FETCH API -->
+    <div class="example">
+        <h2>9. Fetch API (Like Python requests)</h2>
+        <p>Call APIs just like your Weather and Pokedex apps!</p>
+        <input type="text" id="pokemonInput" placeholder="Enter Pokemon name" value="pikachu">
+        <button onclick="fetchPokemon()">Fetch Pokemon</button>
+        <div id="pokeOutput" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- SECTION 10: PRACTICAL EXAMPLE -->
+    <div class="example">
+        <h2>10. Practical Example - To-Do List</h2>
+        <p>Combining everything you learned!</p>
+        <input type="text" id="todoInput" placeholder="Enter a task">
+        <button onclick="addTodo()">Add Task</button>
+        <ul id="todoList"></ul>
+    </div>
+
+    <!-- JavaScript Code Below -->
+    <script>
+        console.log("JavaScript lesson loaded! Check this console for output.");
+
+        // SECTION 1: VARIABLES
+        function showVariables() {
+            const output = document.getElementById('varOutput');
+            output.style.display = 'block';
+
+            // Different types
+            let name = "Alice";              // String
+            let age = 25;                    // Number
+            let isStudent = true;            // Boolean
+            let hobbies = ["coding", "gaming"];  // Array
+            let person = {name: "Bob", age: 30}; // Object
+
+            console.log("=== VARIABLES ===");
+            console.log("Name:", name);
+            console.log("Age:", age);
+            console.log("Is Student:", isStudent);
+            console.log("Hobbies:", hobbies);
+            console.log("Person:", person);
+
+            output.innerHTML = `
+                <strong>Check the console!</strong><br>
+                String: "${name}"<br>
+                Number: ${age}<br>
+                Boolean: ${isStudent}<br>
+                Array: [${hobbies.join(", ")}]<br>
+                Object: {name: "${person.name}", age: ${person.age}}
+            `;
+        }
+
+        // SECTION 2: FUNCTIONS
+        function showFunctions() {
+            const output = document.getElementById('funcOutput');
+            output.style.display = 'block';
+
+            // Traditional function
+            function greet(name) {
+                return `Hello, ${name}!`;
+            }
+
+            // Arrow function (modern way)
+            const greetArrow = (name) => `Hello, ${name}!`;
+
+            // Function with multiple parameters
+            const add = (a, b) => a + b;
+
+            console.log("=== FUNCTIONS ===");
+            console.log(greet("Alice"));
+            console.log(greetArrow("Bob"));
+            console.log("5 + 3 =", add(5, 3));
+
+            output.innerHTML = `
+                Traditional: ${greet("Alice")}<br>
+                Arrow: ${greetArrow("Bob")}<br>
+                Math: 5 + 3 = ${add(5, 3)}
+            `;
+        }
+
+        // SECTION 3: ARRAYS
+        function showArrays() {
+            const output = document.getElementById('arrayOutput');
+            output.style.display = 'block';
+
+            let numbers = [1, 2, 3, 4, 5];
+
+            console.log("=== ARRAYS ===");
+            console.log("Original:", numbers);
+
+            // Common methods (like Python list methods)
+            numbers.push(6);  // Add to end
+            console.log("After push(6):", numbers);
+
+            let doubled = numbers.map(n => n * 2);  // Like Python list comprehension
+            console.log("Doubled:", doubled);
+
+            let evens = numbers.filter(n => n % 2 === 0);  // Filter
+            console.log("Even numbers:", evens);
+
+            let sum = numbers.reduce((total, n) => total + n, 0);  // Sum all
+            console.log("Sum:", sum);
+
+            output.innerHTML = `
+                Original: [${numbers}]<br>
+                Doubled: [${doubled}]<br>
+                Evens: [${evens}]<br>
+                Sum: ${sum}
+            `;
+        }
+
+        // SECTION 4: OBJECTS
+        function showObjects() {
+            const output = document.getElementById('objOutput');
+            output.style.display = 'block';
+
+            // Object (like Python dict)
+            let pokemon = {
+                name: "Pikachu",
+                type: "Electric",
+                level: 25,
+                moves: ["Thunderbolt", "Quick Attack"],
+                stats: {
+                    hp: 35,
+                    attack: 55
+                }
+            };
+
+            console.log("=== OBJECTS ===");
+            console.log("Pokemon:", pokemon);
+            console.log("Name:", pokemon.name);  // Dot notation
+            console.log("Type:", pokemon["type"]);  // Bracket notation (like Python)
+            console.log("First move:", pokemon.moves[0]);
+            console.log("HP:", pokemon.stats.hp);  // Nested object
+
+            output.innerHTML = `
+                Name: ${pokemon.name}<br>
+                Type: ${pokemon.type}<br>
+                Level: ${pokemon.level}<br>
+                Moves: ${pokemon.moves.join(", ")}<br>
+                HP: ${pokemon.stats.hp}
+            `;
+        }
+
+        // SECTION 5: CONDITIONALS
+        function checkNumber() {
+            const output = document.getElementById('condOutput');
+            output.style.display = 'block';
+            const num = parseInt(document.getElementById('numInput').value);
+
+            let message;
+
+            if (num > 20) {
+                message = `${num} is greater than 20`;
+            } else if (num === 20) {
+                message = `${num} is exactly 20`;
+            } else {
+                message = `${num} is less than 20`;
+            }
+
+            // Check even/odd
+            const evenOdd = (num % 2 === 0) ? "even" : "odd";  // Ternary operator
+
+            console.log("=== CONDITIONAL ===");
+            console.log(message);
+            console.log(`${num} is ${evenOdd}`);
+
+            output.innerHTML = `
+                ${message}<br>
+                ${num} is ${evenOdd}
+            `;
+        }
+
+        // SECTION 6: LOOPS
+        function showLoops() {
+            const output = document.getElementById('loopOutput');
+            output.style.display = 'block';
+
+            console.log("=== LOOPS ===");
+
+            // For loop
+            console.log("For loop (0 to 4):");
+            for (let i = 0; i < 5; i++) {
+                console.log(`  ${i}`);
+            }
+
+            // For...of loop (like Python's for item in list)
+            let fruits = ["apple", "banana", "cherry"];
+            console.log("For...of loop:");
+            for (let fruit of fruits) {
+                console.log(`  ${fruit}`);
+            }
+
+            // forEach (array method)
+            console.log("forEach method:");
+            fruits.forEach((fruit, index) => {
+                console.log(`  ${index}: ${fruit}`);
+            });
+
+            output.innerHTML = `
+                Check console for loop output!<br>
+                Fruits: ${fruits.join(", ")}
+            `;
+        }
+
+        // SECTION 7: DOM MANIPULATION
+        let originalText = "This text will change!";
+
+        function changePage() {
+            const output = document.getElementById('domOutput');
+            const changeable = document.getElementById('changeable');
+
+            // Change text
+            changeable.textContent = "I changed the text with JavaScript!";
+
+            // Change style
+            changeable.style.color = "blue";
+            changeable.style.fontSize = "24px";
+            changeable.style.fontWeight = "bold";
+
+            output.style.display = 'block';
+            output.innerHTML = "Changed the paragraph above using JavaScript!";
+
+            console.log("=== DOM MANIPULATION ===");
+            console.log("Changed text and style of paragraph!");
+        }
+
+        function resetPage() {
+            const changeable = document.getElementById('changeable');
+            changeable.textContent = originalText;
+            changeable.style.color = "black";
+            changeable.style.fontSize = "16px";
+            changeable.style.fontWeight = "normal";
+        }
+
+        // SECTION 8: EVENT LISTENERS
+        // This runs when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInput = document.getElementById('nameInput');
+            const greeting = document.getElementById('greeting');
+
+            // Listen for typing
+            nameInput.addEventListener('input', function() {
+                const name = nameInput.value;
+                if (name) {
+                    greeting.innerHTML = `<strong style="color: green;">Hello, ${name}!</strong>`;
+                } else {
+                    greeting.innerHTML = '';
+                }
+            });
+
+            console.log("Event listener added to name input!");
+        });
+
+        // SECTION 9: FETCH API
+        async function fetchPokemon() {
+            const output = document.getElementById('pokeOutput');
+            output.style.display = 'block';
+            output.innerHTML = "Loading...";
+
+            const pokemonName = document.getElementById('pokemonInput').value.toLowerCase();
+
+            try {
+                console.log("=== FETCH API ===");
+                console.log(`Fetching data for ${pokemonName}...`);
+
+                // Fetch from API (like Python requests.get())
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+
+                if (!response.ok) {
+                    throw new Error("Pokemon not found!");
+                }
+
+                const data = await response.json();
+
+                console.log("Data received:", data);
+
+                output.innerHTML = `
+                    <strong>${data.name.toUpperCase()}</strong><br>
+                    Height: ${data.height}<br>
+                    Weight: ${data.weight}<br>
+                    Base Experience: ${data.base_experience}<br>
+                    Types: ${data.types.map(t => t.type.name).join(", ")}<br>
+                    <img src="${data.sprites.front_default}" alt="${data.name}">
+                `;
+
+            } catch (error) {
+                console.error("Error:", error);
+                output.innerHTML = `<strong style="color: red;">Error: ${error.message}</strong>`;
+            }
+        }
+
+        // SECTION 10: TO-DO LIST
+        let todos = [];  // Store tasks
+
+        function addTodo() {
+            const input = document.getElementById('todoInput');
+            const list = document.getElementById('todoList');
+            const task = input.value.trim();
+
+            if (task === '') {
+                alert('Please enter a task!');
+                return;
+            }
+
+            // Add to array
+            todos.push(task);
+
+            // Create list item
+            const li = document.createElement('li');
+            li.textContent = task;
+            li.style.margin = '10px 0';
+            li.style.cursor = 'pointer';
+
+            // Add click to remove
+            li.addEventListener('click', function() {
+                li.remove();
+                todos = todos.filter(t => t !== task);
+                console.log("Removed task:", task);
+                console.log("Remaining tasks:", todos);
+            });
+
+            list.appendChild(li);
+            input.value = '';  // Clear input
+
+            console.log("=== TO-DO LIST ===");
+            console.log("Added task:", task);
+            console.log("All tasks:", todos);
+        }
+
+        // Allow Enter key to add todo
+        document.getElementById('todoInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+
+        console.log("=========================");
+        console.log("All functions loaded!");
+        console.log("Click buttons to run examples.");
+        console.log("=========================");
+    </script>
+
+</body>
+</html>
